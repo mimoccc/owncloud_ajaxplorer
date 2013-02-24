@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<info>
+	<id>owncloud_ajaxplorer</id>
+	<name>owncloud_ajaxplorer</name>
+	<description>Ajaxplorer API-Login + Iframe</description>
+	<version>1.0</version>
+	<licence>AGPL</licence>
+	<author></author>
+	<require>4</require>
+</info>

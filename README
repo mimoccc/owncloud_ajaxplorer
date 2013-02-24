@@ -1,0 +1,31 @@
+Owncloud-Ajaxplorer
+
+EXTRA INFO
+
+Add 
+
+"AUTH_DRIVER" = array(
+		"NAME"          => "remote",
+		"OPTIONS"       => array(
+			"SLAVE_MODE"  => true,
+			"USERS_FILEPATH" => "AJXP_INSTALL_PATH/data/plugins/auth.serial/users.ser",
+			"LOGIN_URL" => "/",  // The URL to redirect to if a non-logged user tries to access AjaXplorer, optional
+			"LOGOUT_URL" => "/",  // The URL to redirect upon login out, optional
+			"SECRET" => "myprivatesecret",// the secret key that you will pass to the glueCode when communicating with it (see below)
+			"TRANSMIT_CLEAR_PASS"   => false ) // Don't touch this. It's unsafe (and useless here) to transmit clear password.
+	)
+
+to your ajaxplorer/bootstrap_plugins.php
+
+
+	
+POSSIBLE IMPROVEMENTS
+
+Use Login/Logout-Hook to Authenticate/Deauthenticate
+
+Gluecode.php Filecheck
+
+Admin Customizable Autocreate User
+
+User Customizable Gluecode,Secretkey
+
