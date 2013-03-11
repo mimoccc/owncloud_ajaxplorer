@@ -1,19 +1,17 @@
 <?php include_once(OC_App::getAppPath('owncloud_ajaxplorer').'/ajax/db.php'); ?>
-<form id="wiki" >
-	<fieldset class="personalblock" style="background-color:#C2E0FF">
-		<strong>Wiki Username</strong>
-		<input type="text" name="wikiusername" id="wikiusername" value="<?php echo getUser(OCP\User::getUser()); ?>"  />
-		<strong>Wiki Passwort</strong>
-		<input type="text" name="wikipassword" id="wikipassword" value="<?php echo getUserPW(OCP\User::getUser()); ?>"  />
-		<strong>Wiki URL</strong>
-		<input type="text" name="wikiurl" id="wikiurl" value="<?php echo getWikiURL(OCP\User::getUser()); ?>"  />
-		<br /><strong>Auth User</strong>
-		<input type="text" name="authuser" id="authuser" value="<?php echo getAuthUser(OCP\User::getUser()); ?>"  />
-		<strong>Auth Password</strong>
-		<input type="text" name="authpw" id="authpw" value="<?php echo getAuthPW(OCP\User::getUser()); ?>"  />
+<form id="ajaxplorer" >
+	<fieldset class="personalblock" style="background-color:#FFCCCC">
+		<strong>GlueCode.php Path</strong>
+		<input type="text" name="gluecode" id="gluecode" value="<?php echo ajaxplorer_getgluecode(OCP\User::getUser()); ?>"  />
+		<strong>Password</strong>
+		<input type="text" name="gluecodepassword" id="gluecodepassword" value="<?php echo ajaxplorer_getgluecodepassword(OCP\User::getUser()); ?>"  />
+		
+		<strong>Ajaxplorer URL</strong>
+		<input type="text" name="ajaxplorerurl" id="ajaxplorerurl" value="<?php echo ajaxplorer_getajaxplorerurl(OCP\User::getUser()); ?>"  />
+		
 		
 <style type="text/css">
-.wikibutton {
+.ajaxplorerbutton {
    border-top: 1px solid #96d1f8;
    background: #65a9d7;
    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
@@ -38,7 +36,7 @@
    .green {color:green;}
    .red {color:red;}
 </style>		
-        <a href="javascript:void(0)" class="wikibutton">Speichern</a>
+        <a href="javascript:void(0)" class="ajaxplorerbutton">Speichern</a>
 		<br />
 	</fieldset>
 	

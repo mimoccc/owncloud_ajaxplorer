@@ -1,51 +1,38 @@
 <?php
 
-function insert($userid,$userpw,$useraccount,$wikiurl,$wikiuser,$wikipassword) {
+function ajaxplorer_insert($gluecode,$gluecodepassword,$user,$ajaxplorerurl) {
 
 
-$params = array($useraccount);
-$params2 = array(trim($userid),trim($userpw),trim($useraccount),trim($wikiurl),trim($wikiuser),trim($wikipassword));
+$params = array($user);
+$params2 = array($gluecode,$gluecodepassword,$user,$ajaxplorerurl);
 
-$query=OC_DB::prepare("delete from *PREFIX*wiki where useraccount =?");
-$query2=OC_DB::prepare("insert into *PREFIX*wiki (user,pw,useraccount,url,wikiuser,wikipassword) values (?,?,?,?,?,?)");
+$query=OC_DB::prepare("delete from *PREFIX*ajaxplorer where user =?");
+$query2=OC_DB::prepare("insert into *PREFIX*ajaxplorer (gluecode,gluecodepassword,user,ajaxplorerurl) values (?,?,?,?)");
 
 $result=$query->execute($params);
 $result=$query2->execute($params2);
 
 }
-function getUser($useraccount) {
-$params = array($useraccount);
-$query=OC_DB::prepare("select user from *PREFIX*wiki where useraccount=?");
+function ajaxplorer_getgluecode($user) {
+$params = array($user);
+$query=OC_DB::prepare("select gluecode from *PREFIX*ajaxplorer where user=?");
 $result=$query->execute($params);
 $data=$result->fetchAll();
-return $data[0]['user']; 
+return $data[0]['gluecode']; 
 }
-function getUserPW($useraccount) {
-$params = array($useraccount);
-$query=OC_DB::prepare("select pw from *PREFIX*wiki where useraccount=?");
+function ajaxplorer_getgluecodepassword($user) {
+$params = array($user);
+$query=OC_DB::prepare("select gluecodepassword from *PREFIX*ajaxplorer where user=?");
 $result=$query->execute($params);
 $data=$result->fetchAll();
-return $data[0]['pw']; 
+return $data[0]['gluecodepassword']; 
 }
-function getWikiURL($useraccount) {
-$params = array($useraccount);
-$query=OC_DB::prepare("select url from *PREFIX*wiki where useraccount=?");
+
+function ajaxplorer_getajaxplorerurl($user) {
+$params = array($user);
+$query=OC_DB::prepare("select ajaxplorerurl from *PREFIX*ajaxplorer where user=?");
 $result=$query->execute($params);
 $data=$result->fetchAll();
-return $data[0]['url']; 
-}
-function getAuthUser($useraccount) {
-$params = array($useraccount);
-$query=OC_DB::prepare("select wikiuser from *PREFIX*wiki where useraccount=?");
-$result=$query->execute($params);
-$data=$result->fetchAll();
-return $data[0]['wikiuser']; 
-}
-function getAuthPW($useraccount) {
-$params = array($useraccount);
-$query=OC_DB::prepare("select wikipassword from *PREFIX*wiki where useraccount=?");
-$result=$query->execute($params);
-$data=$result->fetchAll();
-return $data[0]['wikipassword']; 
+return $data[0]['ajaxplorerurl']; 
 }
 ?>

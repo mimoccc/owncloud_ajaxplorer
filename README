@@ -15,7 +15,7 @@ Add
 			"TRANSMIT_CLEAR_PASS"   => false ) // Don't touch this. It's unsafe (and useless here) to transmit clear password.
 	)
 
-to your ajaxplorer/bootstrap_plugins.php
+to your ajaxplorer/conf/bootstrap_plugins.php
 
 
 	

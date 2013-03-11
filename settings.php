@@ -1,6 +1,6 @@
 <?php
 
-OCP\User::checkAdminUser();
+OCP\User::checkLoggedIn();
 
 OCP\Util::addScript( "owncloud_ajaxplorer", "admin" );
 

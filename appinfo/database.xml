@@ -14,35 +14,25 @@
     			<length>64</length>
 			</field>
 			<field>
-				<name>pw</name>
+				<name>gluecode</name>
 				<type>text</type>
 				<notnull>true</notnull>
 				<length>64</length>
 			</field>
 			<field>
-				<name>useraccount</name>
+				<name>gluecodepassword</name>
 				<type>text</type>
 				<notnull>true</notnull>
 				<length>64</length>
 			</field>
+			
 			<field>
-				<name>url</name>
+				<name>ajaxplorerurl</name>
 				<type>text</type>
 				<notnull>true</notnull>
 				<length>64</length>
 			</field>
-			<field>
-				<name>wikiuser</name>
-				<type>text</type>
-				<notnull>true</notnull>
-				<length>64</length>
-			</field>
-			<field>
-				<name>wikipassword</name>
-				<type>text</type>
-				<notnull>true</notnull>
-				<length>64</length>
-			</field>
+			
 		</declaration>
 		</table>
 		
