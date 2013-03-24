@@ -11,11 +11,12 @@ $(document).ready(function(){
 			if (data == 'true') {
 			$(".ajaxplorerbutton").removeClass('red');
 			$(".ajaxplorerbutton").addClass('green');
+			alert("Speichern erfolgreich");
 			}
 			else {
-			alert(data);
 			$(".ajaxplorerbutton").removeClass('green');
 			$(".ajaxplorerbutton").addClass('red');
+			alert("Speichern fehlgeschlagen");
 			}
 		});
 	});

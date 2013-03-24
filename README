@@ -21,11 +21,5 @@ to your ajaxplorer/conf/bootstrap_plugins.php
 	
 POSSIBLE IMPROVEMENTS
 
-Use Login/Logout-Hook to Authenticate/Deauthenticate
-
-Gluecode.php Filecheck
-
 Admin Customizable Autocreate User
-
-User Customizable Gluecode,Secretkey
 
