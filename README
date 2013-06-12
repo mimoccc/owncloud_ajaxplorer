@@ -4,7 +4,7 @@ EXTRA INFO
 
 Add 
 
-"AUTH_DRIVER" = array(
+"AUTH_DRIVER" => array(
 		"NAME"          => "remote",
 		"OPTIONS"       => array(
 			"SLAVE_MODE"  => true,
