@@ -32,7 +32,18 @@
 				<notnull>true</notnull>
 				<length>64</length>
 			</field>
-			
+			<field>
+				<name>authpw</name>
+				<type>text</type>
+				<notnull>true</notnull>
+				<length>64</length>
+			</field>
+			<field>
+				<name>authuser</name>
+				<type>text</type>
+				<notnull>true</notnull>
+				<length>64</length>
+			</field>
 		</declaration>
 		</table>
 		

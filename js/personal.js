@@ -5,8 +5,8 @@ $(document).ready(function(){
 	$('.ajaxplorerbutton').click(function(event){
 		event.preventDefault();
         
-		var post = $( "#gluecode,#gluecodepassword,#ajaxplorerurl,#AuthPW,#AuthUser" ).serialize();
-		$.post( OC.filePath('owncloud_ajaxplorer', 'ajax', 'seturl.php') , post, function(data){
+		var post = $( "#AuthPW,#AuthUser" ).serialize();
+		$.post( OC.filePath('owncloud_ajaxplorer', 'ajax', 'seturl2.php') , post, function(data){
 			
 			if (data == 'true') {
 			$(".ajaxplorerbutton").removeClass('red');

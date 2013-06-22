@@ -18,6 +18,7 @@
 */
 
 OCP\App::registerAdmin( 'owncloud_ajaxplorer', 'settings' );
+OCP\App::registerPersonal( 'owncloud_ajaxplorer', 'settings2' );
 
 OCP\App::addNavigationEntry( array( 
 	'id' => 'owncloud_ajaxplorer',
